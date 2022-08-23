@@ -1,0 +1,189 @@
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-home {
+    //-------------------------------------------------------
+    .c-mainvisual {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        &__draggable {
+            height: 700px;
+            @include sp {
+                height: 374px;
+            }
+
+            &item {
+                height: 100%;
+                width: 100%;
+
+                img {
+                    height: 700px;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    @include tab {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    // @include sp {
+                    //     height: 374px;
+                    // }
+                    @include sp {
+                        height: 374px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            position: absolute;
+            top: 73.7%;
+            left: 34.2%;
+            transform: translate(-50%, -50%);
+            @include tab {
+                left: 37.2%;
+            }
+
+            @include sp {
+                transform: translate(0);
+                top: unset;
+                left: 5%;
+                bottom: 27px;
+                text-align: center;
+            }
+        }
+
+        &__img {
+            margin-bottom: 35px;
+            @include sp {
+                margin-bottom: 34px;
+                width: 281px;
+            }
+        }
+
+        &__text {
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 9px 100px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 3px;
+            font-feature-settings: "palt" 1;
+
+            @include sp {
+                font-size: 1.6rem;
+                max-width: 289px;
+                padding: 5px 0;
+            }
+            // @include sp320 {
+            //     padding: 0 16px;
+            //     display: inline-block;
+            // }
+        }
+    }
+
+    .c-info {
+        padding-top: 50px;
+        padding-bottom: 80px;
+
+        &__sub {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            letter-spacing: -0.5px;
+        }
+
+        &__list {
+            margin-top: 44px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .c-link {
+        padding: 10px 0;
+        background-color: #f8b616;
+        @include sp {
+            padding-bottom: 45px;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include sp {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__lr {
+            max-width: 440px;
+            width: 100%;
+            @include sp {
+                max-width: 100%;
+                width: 50%;
+            }
+        }
+
+        &__mid {
+            position: relative;
+            flex: 1;
+            @include sp {
+                min-width: 100%;
+                order: -1;
+            }
+
+            &img {
+                position: absolute;
+                width: 639px;
+                bottom: 63%;
+                left: 50%;
+                transform: translateX(-50%);
+                @include sp {
+                    max-width: 243px;
+                    width: 100%;
+                    bottom: 59%;
+                }
+            }
+
+            &content {
+                margin-top: 157px;
+                @include sp {
+                    margin: 77px 0 21px;
+                }
+
+                p {
+                    font-size: 1.7rem;
+                    line-height: 1.5;
+                    letter-spacing: -1.3px;
+                    text-align: center;
+                    @include sp {
+                        font-size: 1.3rem;
+                        letter-spacing: -1px;
+                    }
+                }
+            }
+        }
+
+        img {
+            height: auto;
+        }
+    }
+
+    .c-backtotop {
+        width: 100%;
+        padding-top: 29px;
+        padding-bottom: 31px;
+        text-align: center;
+
+        img {
+            width: 30px;
+            margin: 0 auto;
+        }
+    }
+}

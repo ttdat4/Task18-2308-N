@@ -1,0 +1,94 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+.c-btn {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #00ada0;
+    height: 60px;
+    padding-top: 9px;
+    margin-top: 49px;
+    box-shadow: 4px 4px #000;
+    @include sp {
+        max-width: 269px;
+        height: 38px;
+        padding: 12px 0;
+        box-shadow: 2px 2px #000;
+    }
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 2.5;
+        @include sp {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 19px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-image: url("assets/img/icon_arrow.png");
+            background-size: cover;
+            z-index: 213;
+            @include sp {
+                width: 15px;
+                height: 15px;
+                right: 30px;
+                top: 12px;
+            }
+        }
+    }
+
+    &link {
+        background-color: #fff;
+        box-shadow: none;
+        @include sp {
+            display: none;
+        }
+
+        a {
+            color: #00ada0;
+
+            &::after {
+                background-image: url("assets/img/icon_arrow2.png");
+            }
+        }
+    }
+
+    &linkmb {
+        display: none;
+        @include sp {
+            display: block;
+            margin-top: 24px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: none;
+
+        }
+
+        a {
+            color: #00ada0;
+
+            &::after {
+                background-image: url("assets/img/icon_arrow2.png");
+            }
+        }
+    }
+}
+/*
+------------------------------------------------------------*/
+
